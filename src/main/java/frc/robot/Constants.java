@@ -7,6 +7,9 @@
 
 package frc.robot;
 
+import com.revrobotics.CANSparkMax;
+import com.revrobotics.CANSparkMaxLowLevel.MotorType;
+
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
  * constants.  This class should not be used for any other purpose.  All constants should be
@@ -16,5 +19,15 @@ package frc.robot;
  * constants are needed, to reduce verbosity.
  */
 public final class Constants {
-    
+    public static CANSparkMax motorFL = new CANSparkMax(0, MotorType.kBrushless); //Creates a CANSparkMax motor object which is set to "brushless".
+    public static CANSparkMax motorFR = new CANSparkMax(1, MotorType.kBrushless); //Each motor has a temporary ID number.
+    public static CANSparkMax motorBL = new CANSparkMax(2, MotorType.kBrushless);
+    public static CANSparkMax motorBR = new CANSparkMax(3, MotorType.kBrushless);
+
+    public static CANSparkMax intakeMotor = new CANSparkMax(4, MotorType.kBrushless); //intake motor, temporary id number
+
+    public static double intakeSpeed = 1;
+
+
+
 }

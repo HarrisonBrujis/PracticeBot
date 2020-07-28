@@ -7,8 +7,32 @@
 
 package frc.robot.commands;
 
+import java.util.Set;
+
+import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
+import frc.robot.subsystems.Intake;
+
 /**
  * Add your docs here.
  */
-public class IntakeBall {
+public class IntakeBall extends CommandBase {
+    private final Intake intakeDevice;
+
+    public IntakeBall(Intake subsystem) {
+        intakeDevice = subsystem;
+        addRequirements(intakeDevice);
+    }
+
+    @Override
+    public void initialize() {
+        intakeDevice.setIntakeSpeed(Constants.intakeSpeed);
+    }
+    @Override
+    public void execute(){}
+    
+    @Override
+    public void end(boolean interuptted){
+        intakeDevice.stopIntake();
+    }
 }

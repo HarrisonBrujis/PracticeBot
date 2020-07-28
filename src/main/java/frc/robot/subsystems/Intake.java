@@ -7,8 +7,20 @@
 
 package frc.robot.subsystems;
 
+import edu.wpi.first.wpilibj2.command.Subsystem;
+import frc.robot.Constants;
+
 /**
  * Add your docs here.
  */
-public class Intake {
+public class Intake implements Subsystem{
+
+    public Intake(){}
+
+    public void setIntakeSpeed(double speed){ //Sets intake to desired speed
+        Constants.intakeMotor.set(speed);
+    }
+    public void stopIntake(){ //Stops intake by setting its speed to zero
+        Constants.intakeMotor.set(0);
+    }
 }
