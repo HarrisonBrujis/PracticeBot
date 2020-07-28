@@ -10,6 +10,9 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.commands.IntakeBall;
+import frc.robot.subsystems.Intake;
+
 
 /**
  * This class is where the bulk of the robot should be declared.  Since Command-based is a
@@ -18,6 +21,7 @@ import edu.wpi.first.wpilibj2.command.Command;
  * (including subsystems, commands, and button mappings) should be declared here.
  */
 public class RobotContainer {
+  Intake intake = new Intake();
   // The robot's subsystems and commands are defined here...
 
   /**
@@ -35,6 +39,7 @@ public class RobotContainer {
    * {@link edu.wpi.first.wpilibj2.command.button.JoystickButton}.
    */
   private void configureButtonBindings() {
+  Constants.intakeButton.whenPressed(new IntakeBall(intake));
   }
 
 
