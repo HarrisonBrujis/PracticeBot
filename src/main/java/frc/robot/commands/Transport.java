@@ -19,19 +19,19 @@ public class Transport extends CommandBase {
 
     public Transport(BeltTransport subsystem){
         bT = subsystem;
-        addRequirements(bT);
+        addRequirements(bT); //Adds the BeltTransport object to CommandScheduler
     }
 
     @Override
     public void initialize(){
-        bT.startTransport(Constants.transportSpeed);
+        bT.startTransport(Constants.transportSpeed); //starts transport on initialization
     }
 
     @Override
     public void execute(){}
 
     @Override
-    public void end(boolean interrupted){
+    public void end(boolean interrupted){ //sets motor speed to zero when the command leaves the CommandScheduler
         bT.stopTransport();
     }
 }
