@@ -8,6 +8,7 @@
 package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj.SpeedControllerGroup;
+import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.Constants;
 /**
  * Add your docs here.
@@ -15,7 +16,7 @@ import frc.robot.Constants;
 
 
 
-public class BeltTransport {
+public class BeltTransport extends SubsystemBase{
     SpeedControllerGroup leftTransport;
     SpeedControllerGroup rightTransport;
 

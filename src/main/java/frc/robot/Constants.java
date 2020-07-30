@@ -35,8 +35,12 @@ public final class Constants {
     public static CANSparkMax motortFOUR = new CANSparkMax(8, MotorType.kBrushless); //Motor for a belt transport system. Temporary ID number
 
     public static double intakeSpeed = 1;
+    public static double transportSpeed = 1;
 
-    public static Joystick tempStick = new Joystick(1);
-    public static JoystickButton intakeButton = new JoystickButton(tempStick, 0);
+    public static Joystick intakeStick = new Joystick(1); //Temporary IDs. MUST CHANGE WHEN TESTING
+    public static JoystickButton intakeButton = new JoystickButton(intakeStick, 0); //Temporary IDs. MUST CHANGE WHEN TESTING
+
+    public static Joystick transportStick = new Joystick(0); //Temporary IDs. MUST CHANGE WHEN TESTING
+    public static JoystickButton transportButton = new JoystickButton(transportStick, 1); //Temporary IDs. MUST CHANGE WHEN TESTING
 
 }

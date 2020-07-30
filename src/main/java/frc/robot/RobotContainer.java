@@ -10,6 +10,8 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
 import frc.robot.commands.IntakeBall;
+import frc.robot.commands.Transport;
+import frc.robot.subsystems.BeltTransport;
 import frc.robot.subsystems.Intake;
 
 
@@ -21,6 +23,7 @@ import frc.robot.subsystems.Intake;
  */
 public class RobotContainer {
   Intake intake = new Intake();
+  BeltTransport beltTransport = new BeltTransport();
   // The robot's subsystems and commands are defined here...
 
   /**
@@ -39,6 +42,7 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
   Constants.intakeButton.whenPressed(new IntakeBall(intake));
+  Constants.transportButton.whenPressed(new Transport(beltTransport));
   }
 
 
