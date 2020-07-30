@@ -28,11 +28,15 @@ public final class Constants {
     public static CANSparkMax motorBR = new CANSparkMax(3, MotorType.kBrushless);
 
     public static CANSparkMax intakeMotor = new CANSparkMax(4, MotorType.kBrushless); //intake motor, temporary id number
+   
+    public static CANSparkMax motortONE = new CANSparkMax(5, MotorType.kBrushless); //Motor for a belt transport system. Temporary ID number
+    public static CANSparkMax motortTWO = new CANSparkMax(6, MotorType.kBrushless); //Motor for a belt transport system. Temporary ID number
+    public static CANSparkMax motortTHREE = new CANSparkMax(7, MotorType.kBrushless); //Motor for a belt transport system. Temporary ID number
+    public static CANSparkMax motortFOUR = new CANSparkMax(8, MotorType.kBrushless); //Motor for a belt transport system. Temporary ID number
 
     public static double intakeSpeed = 1;
 
     public static Joystick tempStick = new Joystick(1);
     public static JoystickButton intakeButton = new JoystickButton(tempStick, 0);
-
 
 }
